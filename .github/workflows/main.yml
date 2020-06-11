@@ -12,8 +12,9 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-      - name: Install Surge
+    # Runs a set of commands using the runners shell
+      - name: Installing surge
         run: npm install -g surge
-      - name: Run surge
-      run: surge ./ hypnotic-respect.surge.sh --token ${{secrets.SURGE_TOKEN}}
-        
+      - name: deploying using surge
+        run: surge ./ hypnotic-respect.surge.sh --token ${{secrets.SURGE_TOKEN}}
+  
