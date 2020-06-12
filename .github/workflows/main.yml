@@ -28,6 +28,6 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
-      run: |
-        npm install -g surge,
-        surge ./ hypnotic-respect.surge.sh --token ${{secrets.SURGE_TOKEN}}.
+      run: npm install -g surge
+        
+      run: surge ./ hypnotic-respect.surge.sh --token ${{secrets.SURGE_TOKEN}}
